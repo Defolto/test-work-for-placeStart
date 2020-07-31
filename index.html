@@ -1,12 +1,319 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Тепло леса</title>
+    <link rel="stylesheet" href="./css/bootstrap/css/bootstrap.min.css"> 
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>ку</h1>
+
+    <!-- Шапка -->
+    <header>
+      <div class="container">
+          <div class="row">
+            <div class="col-12">
+                <nav class="navbar navbar-expand-lg">
+                    <a class="navbar-brand" href="#">
+                        <img src="./images/Group.svg" alt="Логотип">
+                    </a>
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon">ку</span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarText">
+                        <ul class="navbar-nav w-100 px-5">
+                            <li class="nav-item flex-fill active">
+                                <a class="nav-link" href="#">О компании</a>
+                            </li>
+                            <li class="nav-item flex-fill dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    Проекты
+                                </a>
+                                <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                                    <a class="dropdown-item" href="#">Action</a>
+                                    <a class="dropdown-item" href="#">Another action</a>
+                                    <a class="dropdown-item" href="#">Something else here</a>
+                                </div>
+                            </li>
+                            <li class="nav-item flex-fill">
+                                <a class="nav-link" href="#">Наши работы</a>
+                            </li>
+                            <li class="nav-item flex-fill dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    Услуги
+                                </a>
+                                <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                                    <a class="dropdown-item" href="#">Action</a>
+                                    <a class="dropdown-item" href="#">Another action</a>
+                                    <a class="dropdown-item" href="#">Something else here</a>
+                                </div>
+                            </li>
+                            <li class="nav-item flex-fill">
+                                <a class="nav-link" href="#">Статьи</a>
+                            </li>
+                            <li class="nav-item flex-fill">
+                                <a class="nav-link" href="#">Контакты</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="orangeBtn">
+                        +7 906 2-999-555
+                    </div>
+                  </nav>
+            </div>
+          </div>
+      </div>
+    </header>
+
+    <!-- главный блок -->
+    <section>
+        <div class="container-fluid blockMainFoto d-flex">
+           <div class="container d-flex flex-row my-auto">
+                <div class="col-md-8 d-flex flex-column">
+                    <h1 class="blockMainFoto__title1">Деревянные дома и бани под ключ</h1>
+                    <h2 class="blockMainFoto__title2">Типовые и индивидуальные проекты по любой технологии</h2>
+                    <div class="orangeBtn blockMainFoto__btn">
+                        Рассчитать стоимость
+                    </div>
+                </div>
+           </div>
+           <div class="blockMainFoto__instaBlock">
+                <img src="./images/insta.svg" alt="Логотип Instagram">
+                <p>Мы в Instagram</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Контент -->
+    <section>
+
+        <!-- Типы зданий -->
+        <section class="container mt-70">
+            <div class="row d-flex justify-content-between">
+                <div class="blockCardType blockCardType-md px-0">
+                    <h4>Дома</h4>
+                    <img src="./images/1.png" alt="">
+                </div>
+                <div class="blockCardType blockCardType-md px-0">
+                    <h4>Бани</h4>
+                    <img src="./images/2.png" alt="">
+                </div>
+                <div class="blockCardType blockCardType-md px-0">
+                    <h4>Беседки</h4>
+                    <img src="./images/3.png" alt="">
+                </div>
+            </div>
+        </section>
+
+        <!-- Мы строим... -->
+        <section class="container building mt-100">
+            <div class="row">
+                <div class="col-md-5">
+                    <img src="./images/wood.png" alt="срез дерева" class="building__foto">
+                </div>
+                <div class="col-md-7">
+                    <h3 class="title">Мы строим качественные дома по современным технологиям</h3>
+                    <p class="building__text">Строительная компания «Тепло Леса» специализируется на проектировании и строительстве частных домов и бань с 2006 года. Мы разработаем индивидуальный проект учитывая все ваши пожелания и воплотим его в жизнь.</p>
+                    <div class="row justify-content-around mt-5">
+                        <div class="building-block-md d-flex flex-column">
+                            <img src="./images/building1.svg" alt="Профилированный брус" class="mx-auto">
+                            <p class="building__type">Профилированный брус</p>
+                        </div>
+                        <div class="building-block-md d-flex flex-column">
+                            <img src="./images/building2.svg" alt="Рублённое бревно" class="mx-auto">
+                            <p class="building__type">Рублённое бревно</p>
+                        </div>
+                        <div class="building-block-md d-flex flex-column">
+                            <img src="./images/building3.svg" alt="Оцилиндрованное бревно" class="mx-auto">
+                            <p class="building__type">Оцилиндрованное бревно</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Наши работы -->
+        <section class="container jobsBlock">
+            <h2 class="title text-center mb-5">Наши работы</h2>
+            <div class="row justify-content-around">
+                <div class="jobsBlock__block-md job1">
+                    <p>Баня "Тополь" (5х6 м)</p>
+                </div>
+                <div class="jobsBlock__block-md job2">
+                    <p>Дом "Ясень" (10х9,5 м)</p>
+                </div>
+                <div class="jobsBlock__block-md job3">
+                    <p>Беседка "Берёза" (3х3 м)</p>
+                </div>
+            </div>
+
+            <div class="row justify-content-around mt-4">
+                <div class="jobsBlock__block-md job3">
+                    <p>Беседка "Берёза" (3х3 м)</p>
+                </div>
+                <div class="jobsBlock__block-md job2">
+                    <p>Дом "Ясень" (10х9,5 м)</p>
+                </div>
+                <div class="jobsBlock__block-md job1">
+                    <p>Баня "Тополь" (5х6 м)</p>
+                </div>
+            </div>
+
+            <div class="row justify-content-around mt-4">
+                <div class="orangeBtn">
+                    Все работы
+                </div>
+            </div>
+        </section>
+
+        <!-- Почему выгодно... -->
+        <section class="container benefit mt-70">
+            <h2 class="title text-center">Почему выгодно работать с нами?</h2>
+            <div class="row justify-content-between">
+                <div class="col-md-3 d-flex flex-column">
+                    <img src="./images/plus1.svg" alt="">
+                    <p>Консультации специалистов по всем этапам строительства</p>
+                </div>
+                <div class="col-md-3 d-flex flex-column">
+                    <img src="./images/plus2.svg" alt="">
+                    <p>Выгодная стоимость</p>
+                </div>
+                <div class="col-md-3 d-flex flex-column">
+                    <img src="./images/plus3.svg" alt="">
+                    <p>Качественные материалы</p>
+                </div>
+            </div>
+            <div class="row justify-content-between mt-5">
+                <div class="col-md-3 d-flex flex-column">
+                    <img src="./images/plus4.svg" alt="">
+                    <p>индивидуальные проекты</p>
+                </div>
+                <div class="col-md-3 d-flex flex-column">
+                    <img src="./images/plus5.svg" alt="">
+                    <p>Выполнение работ точно в срок</p>
+                </div>
+                <div class="col-md-3 d-flex flex-column">
+                    <img src="./images/plus6.svg" alt="">
+                    <p>Гарантийные обязательства</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Хотите дом не похожий... -->
+        <section class="container-fluid callBack">
+            <div class="container my-auto">
+                <h3 class="callBack__title title">Хотите дом не похожий на другие?</h3>
+                <p class="callBack__text">Оставьте свой номер, мы свяжемся с вами, уточним детали и рассчитаем стоиость дома вашей мечты</p>
+                <div class="row">
+                    <div class="col-5 mx-auto">
+                        <form action="#">
+                            <input type="text" class="callBack__input" placeholder="Телефон" name="user_phone">
+                            <button type="submit" class="callBack__submit">Оставить заявку</button>
+                        </form>
+                    </div>
+                </div>
+                <small>Нажимая кнопку, я соглашаюсь <a href="#">на обработку персональных данных</a></small>
+            </div>
+        </section>
+
+        <!-- Новости -->
+        <section class="container news mb-5 mt-5">
+            <div class="row">
+                <div class="col-md-6">
+                    <img src="./images/SimpleFoto.jpg" alt="Фотография дома">
+                </div>
+                <div class="col-md-6 news__col">
+                    <h1>H1. Пример заголовка SEO текста в две строки</h1>
+                    <p>В конце ноября, в оттепель, часов в девять утра, поезд Петербургско-Варшавской железной дороги на всех парах подходил к Петербургу. Было так сыро и туманно; в десяти шагах, вправо и влево от дороги, трудно было разглядеть хоть что-нибудь из окон вагона.</p>
+                    <h2>H2. Пример подзаголовка второго уровня типовой текстовой страницы в две строки или более</h2>
+
+                    <h1>H1. Пример заголовка SEO текста в две строки</h1>
+                    <p>В конце ноября, в оттепель, часов в девять утра, поезд Петербургско-Варшавской железной дороги на всех парах подходил к Петербургу. Было так сыро и туманно; в десяти шагах, вправо и влево от дороги, трудно было разглядеть хоть что-нибудь из окон вагона.</p>
+                    <h2>H2. Пример подзаголовка второго уровня типовой текстовой страницы в две строки или более</h2>
+                </div>
+            </div>
+        </section>
+
+    </section>
+
+    <!-- Подвал -->
+    <footer>
+        <div class="container footer">
+            <div class="row">
+                <div class="col-md-2">
+                    <ul>
+                        <li>
+                            <a href="#">О компании</a>
+                        </li>
+                        <li>   
+                            <a href="#">Наши работы</a>
+                        </li>
+                        <li>   
+                            <a href="#">Статьи</a>
+                        </li>
+                        <li>   
+                            <a href="#">Контакты</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-md-2">
+                    <h5>Проекты</h5>
+                    <ul>
+                        <li>   
+                            <a href="#">Дома</a>
+                        </li>
+                        <li>   
+                            <a href="#">Бани</a>
+                        </li>
+                        <li>   
+                            <a href="#">Беседки</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-md-4">
+                    <h5>Услуги</h5>
+                    <ul>
+                        <li><a href="#">Наружиная отделка</a></li>
+                        <li><a href="#">Внтуренняя отделка</a></li>
+                        <li><a href="#">Кровельные работы</a></li>
+                    </ul>
+                </div>
+                <address class="col-md-4">
+                    <h5 class="m-0">Связаться с нами</h5>
+                    <div class="footer__contact">
+                        <p>+ 7 906 2-999-555</p>
+                        <p>info@teplolesa.ru</p>
+                    </div>
+                    <div class="footer__insta">
+                        <img src="./images/instaOrange.svg" alt="Инстаграм">
+                        <p>Мы в Instagram</p>
+                    </div>
+                </address>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Сделано в PLACESTART -->
+    <div class="container-fluid PS">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3">
+                    <p>© 2019 ООО «АБ-СТРОЙ»</p>
+                </div>
+                <div class="col-md-3">
+                   <a href="#">Политика конфиденциальности</a>
+                </div>
+                <div class="col-md-3 offset-md-3 PS__madeIn">
+                    <a href="#">Сделано в 
+                        <img src="./images/PS.svg" alt="PLACESTART">
+                    </a>
+                 </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="./js/jquery-1.11.0.js"></script>
+    <script src="./css/bootstrap/js/bootstrap.min.js"></script>
 </body>
 </html>
