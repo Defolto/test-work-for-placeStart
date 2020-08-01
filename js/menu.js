@@ -7,6 +7,8 @@ const projectsNames = [["Название проекта", 'Ссылка на п
 
 togglerMenu.addEventListener('click', ()=>{
     menu.classList.toggle('menu__active');
+    document.querySelector('body').classList.toggle('body__dontScroll');
+    mainMenu()
 })
 
 function openProject() {
@@ -72,4 +74,21 @@ function mainMenu() {
         <a href="#">Контакты</a>
     </li>
     `)
+}
+
+// Маска для телефона
+$(function() {
+    $(".CheckPhone").mask("+7 999 999-99-99", {placeholder: " "});
+});
+
+function checkForm1() {
+    if($('#i1').val().length != 16){
+        document.getElementById('errorForm1').classList.add("errorForm1__active");
+        document.getElementById('i1').classList.add("input__error");
+        setTimeout(() => {
+            document.getElementById('errorForm1').classList.remove("errorForm1__active");
+            document.getElementById('i1').classList.remove("input__error");
+        }, 2000);
+        return false;
+    }
 }

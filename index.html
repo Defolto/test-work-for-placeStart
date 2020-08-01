@@ -9,45 +9,68 @@
 </head>
 <body>
 
-    <!-- мобильное меню -->
-    <div class="menu">
-        <ul class="menu__spisok">
-            <li>
-                <a href="#">О компании</a>
-            </li>
-            <li onclick="openProject()">
-                <p>Проекты</p>
-                <img src="./images/arrowMenu.svg" alt="стрелка">
-            </li>
-            <li>
-                <a href="#">Наши работы</a>
-            </li>
-            <li onclick="openService()">
-                <p>Услуги</p>
-                <img src="./images/arrowMenu.svg" alt="стрелка">
-            </li>
-            <li>
-                <a href="#">Статьи</a>
-            </li>
-            <li>
-                <a href="#">Контакты</a>
-            </li>
-        </ul>
-        <div class="menu-contact">
-            <p class="menu-contact__callBack">Связаться с нами</p>
-            <div class="menu-contact__number">
-                <p>+7 906 2-999-555</p> 
-                <p>info@teplolesa.ru</p>
+    <!-- Modal -->
+    <div class="modal fade" id="callBack" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+        <div class="modal-dialog modal-sm modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-header pb-0">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
             </div>
-            <div class="menu-contact__insta">
-                <img src="./images/instaOrange.svg" alt="Инстаграм">
-                <p>Мы в Instagram</p>
+            <div class="modal-body pt-2">
+                <p>Заказать звонок</p>
+                <form action="#" onsubmit="checkForm1()">
+                    <p id="errorForm1">Ошибка ввода</p>
+                    <input type="text" placeholder="Телефон" class="CheckPhone" id="i1">
+                    <button type="submit">Заказать</button>
+                </form>
+                <small>Нажимая кнопку, вы соглашаетесь</small>
+                <a href="#">на обработку данных</a>
             </div>
+        </div>
         </div>
     </div>
 
     <!-- Шапка -->
-    <header>
+    <header class="fixed-top"> 
+
+        <div class="menu">
+            <ul class="menu__spisok">
+                <li>
+                    <a href="#">О компании</a>
+                </li>
+                <li onclick="openProject()">
+                    <p>Проекты</p>
+                    <img src="./images/arrowMenu.svg" alt="стрелка">
+                </li>
+                <li>
+                    <a href="#">Наши работы</a>
+                </li>
+                <li onclick="openService()">
+                    <p>Услуги</p>
+                    <img src="./images/arrowMenu.svg" alt="стрелка">
+                </li>
+                <li>
+                    <a href="#">Статьи</a>
+                </li>
+                <li>
+                    <a href="#">Контакты</a>
+                </li>
+            </ul>
+            <div class="menu-contact">
+                <p class="menu-contact__callBack">Связаться с нами</p>
+                <div class="menu-contact__number">
+                    <p>+7 906 2-999-555</p> 
+                    <p>info@teplolesa.ru</p>
+                </div>
+                <div class="menu-contact__insta">
+                    <img src="./images/instaOrange.svg" alt="Инстаграм">
+                    <a href="#">Мы в Instagram</a>
+                </div>
+            </div>
+        </div>
+
         <div class="container">
             <div class="row">
             <div class="col-12 px-0">
@@ -70,9 +93,7 @@
                                     Проекты
                                 </a>
                                 <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                                    <a class="dropdown-item" href="#">Action</a>
-                                    <a class="dropdown-item" href="#">Another action</a>
-                                    <a class="dropdown-item" href="#">Something else here</a>
+                                    <a class="dropdown-item" href="#">Пример проекта</a>
                                 </div>
                             </li>
                             <li class="nav-item flex-fill">
@@ -83,9 +104,9 @@
                                     Услуги
                                 </a>
                                 <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                                    <a class="dropdown-item" href="#">Action</a>
-                                    <a class="dropdown-item" href="#">Another action</a>
-                                    <a class="dropdown-item" href="#">Something else here</a>
+                                    <a class="dropdown-item" href="#">Наружная отделка</a>
+                                    <a class="dropdown-item" href="#">Внутренняя отделка</a>
+                                    <a class="dropdown-item" href="#">Кровельные работы</a>
                                 </div>
                             </li>
                             <li class="nav-item flex-fill">
@@ -96,11 +117,9 @@
                             </li>
                         </ul>
                     </div>
-                    <div class="orangeBtn number-phone">
+                    <div class="orangeBtn number-phone" data-toggle="modal" data-target="#callBack">
                         <p>+7 906 2-999-555</p>
-                        <a href="tel:+79062999555">
-                            <img src="./images/phone.svg" alt="">
-                        </a>
+                        <img src="./images/phone.svg" alt="">
                     </div>
                     </nav>
             </div>
@@ -120,10 +139,10 @@
                     </div>
                 </div>
            </div>
-           <div class="blockMainFoto__instaBlock">
+           <a href="#" class="blockMainFoto__instaBlock">
                 <img src="./images/insta.svg" alt="Логотип Instagram">
                 <p>Мы в Instagram</p>
-            </div>
+           </a>
         </div>
     </section>
 
@@ -295,7 +314,7 @@
                 <div class="row">
                     <div class="callBack__form mx-auto">
                         <form action="#">
-                            <input type="text" class="callBack__input" placeholder="Телефон" name="user_phone">
+                            <input type="text" class="callBack__input CheckPhone" placeholder="Телефон" name="user_phone">
                             <button type="submit" class="callBack__submit">Оставить заявку</button>
                         </form>
                     </div>
@@ -373,7 +392,7 @@
                     </div>
                     <div class="footer__insta">
                         <img src="./images/instaOrange.svg" alt="Инстаграм">
-                        <p>Мы в Instagram</p>
+                        <a href="#">Мы в Instagram</a>
                     </div>
                 </address>
             </div>
@@ -400,6 +419,7 @@
     </div>
 
     <script src="./js/jquery-1.11.0.js"></script>
+    <script src="./js/jquery.maskedinput.min.js"></script>
     <script src="./css/bootstrap/js/bootstrap.min.js"></script>
     <script src="./js/menu.js"></script>
 </body>
