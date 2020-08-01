@@ -13,15 +13,17 @@
     <header>
       <div class="container">
           <div class="row">
-            <div class="col-12">
-                <nav class="navbar navbar-expand-lg">
-                    <a class="navbar-brand" href="#">
-                        <img src="./images/Group.svg" alt="Логотип">
-                    </a>
-                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
-                        <span class="navbar-toggler-icon">ку</span>
+            <div class="col-12 px-0">
+                <nav class="navbar navbar-expand-lg px-0">
+                    <button class="navbar-toggler" id="toggleMenu">
+                        <span class="navbar-toggler-icon">
+                            <img src="./images/menu.svg" alt="">
+                        </span>
                     </button>
-                    <div class="collapse navbar-collapse" id="navbarText">
+                    <a class="navbar-brand py-0" href="#">
+                        <img src="./images/Group.svg" class="logo" alt="Логотип">
+                    </a>
+                    <div class="collapse navbar-collapse">
                         <ul class="navbar-nav w-100 px-5">
                             <li class="nav-item flex-fill active">
                                 <a class="nav-link" href="#">О компании</a>
@@ -57,8 +59,11 @@
                             </li>
                         </ul>
                     </div>
-                    <div class="orangeBtn">
-                        +7 906 2-999-555
+                    <div class="orangeBtn number-phone">
+                        <p>+7 906 2-999-555</p>
+                        <a href="tel:+79062999555">
+                            <img src="./images/phone.svg" alt="">
+                        </a>
                     </div>
                   </nav>
             </div>
@@ -69,8 +74,8 @@
     <!-- главный блок -->
     <section>
         <div class="container-fluid blockMainFoto d-flex">
-           <div class="container d-flex flex-row my-auto">
-                <div class="col-md-8 d-flex flex-column">
+           <div class="container d-flex flex-row my-auto px-0">
+                <div class="col-md-8 d-flex flex-column px-0">
                     <h1 class="blockMainFoto__title1">Деревянные дома и бани под ключ</h1>
                     <h2 class="blockMainFoto__title2">Типовые и индивидуальные проекты по любой технологии</h2>
                     <div class="orangeBtn blockMainFoto__btn">
@@ -87,45 +92,53 @@
 
     <!-- Контент -->
     <section>
-
         <!-- Типы зданий -->
         <section class="container mt-70">
-            <div class="row d-flex justify-content-between">
-                <div class="blockCardType blockCardType-md px-0">
-                    <h4>Дома</h4>
+            <div class="row blockCardType__row d-flex justify-content-between">
+                <a href="#" class="blockCardType blockCardType-md px-0">
+                    <div class="blockCardType__block">
+                        <h4>Дома</h4>
+                        <img src="./images/Vector.svg" alt="стрелка" class="blockCardType__vector">
+                    </div>
                     <img src="./images/1.png" alt="">
-                </div>
-                <div class="blockCardType blockCardType-md px-0">
-                    <h4>Бани</h4>
+                </a>
+                <a href="#" class="blockCardType blockCardType-md px-0">
+                    <div class="blockCardType__block">
+                        <h4>Бани</h4>
+                        <img src="./images/Vector.svg" alt="стрелка" class="blockCardType__vector">
+                    </div>
                     <img src="./images/2.png" alt="">
-                </div>
-                <div class="blockCardType blockCardType-md px-0">
-                    <h4>Беседки</h4>
+                </a>
+                <a href="#" class="blockCardType blockCardType-md px-0">
+                    <div class="blockCardType__block">
+                        <h4>Беседки</h4>
+                        <img src="./images/Vector.svg" alt="стрелка" class="blockCardType__vector">
+                    </div>
                     <img src="./images/3.png" alt="">
-                </div>
+                </a>
             </div>
         </section>
 
         <!-- Мы строим... -->
         <section class="container building mt-100">
             <div class="row">
-                <div class="col-md-5">
+                <div class="col-lg-5">
                     <img src="./images/wood.png" alt="срез дерева" class="building__foto">
                 </div>
-                <div class="col-md-7">
+                <div class="col-lg-7">
                     <h3 class="title">Мы строим качественные дома по современным технологиям</h3>
                     <p class="building__text">Строительная компания «Тепло Леса» специализируется на проектировании и строительстве частных домов и бань с 2006 года. Мы разработаем индивидуальный проект учитывая все ваши пожелания и воплотим его в жизнь.</p>
-                    <div class="row justify-content-around mt-5">
-                        <div class="building-block-md d-flex flex-column">
-                            <img src="./images/building1.svg" alt="Профилированный брус" class="mx-auto">
+                    <div class="row building-block-row justify-content-around">
+                        <div class="building-block-md d-flex">
+                            <img src="./images/building1.svg" alt="Профилированный брус">
                             <p class="building__type">Профилированный брус</p>
                         </div>
-                        <div class="building-block-md d-flex flex-column">
-                            <img src="./images/building2.svg" alt="Рублённое бревно" class="mx-auto">
+                        <div class="building-block-md d-flex">
+                            <img src="./images/building2.svg" alt="Рублённое бревно">
                             <p class="building__type">Рублённое бревно</p>
                         </div>
-                        <div class="building-block-md d-flex flex-column">
-                            <img src="./images/building3.svg" alt="Оцилиндрованное бревно" class="mx-auto">
+                        <div class="building-block-md d-flex">
+                            <img src="./images/building3.svg" alt="Оцилиндрованное бревно">
                             <p class="building__type">Оцилиндрованное бревно</p>
                         </div>
                     </div>
@@ -135,32 +148,71 @@
 
         <!-- Наши работы -->
         <section class="container jobsBlock">
-            <h2 class="title text-center mb-5">Наши работы</h2>
+            <h2 class="title text-center">Наши работы</h2>
+            <div class="row jobsBlock-row justify-content-around">
+                <div class="jobsBlock__block-md job1 mb-4">
+                    <p>Баня «Тополь» (5x6 м)</p>
+                    <div class="jobsBlock-info">
+                        <div class="jobsBlock-info__wrapper">
+                            <h5>Баня «Тополь» (5x6 м)</h5>
+                            <span>Вологодская обл., д. Пача</span>
+                            <img src="./images/VectorWhite.svg" alt="белая стрелочка">
+                        </div>
+                    </div>
+                </div>
+                <div class="jobsBlock__block-md job2 mb-4">
+                    <p>Дом «Ясень» (10х9,5 м)</p>
+                    <div class="jobsBlock-info">
+                        <div class="jobsBlock-info__wrapper">
+                            <h5>Дом «Ясень» (10х9,5 м)</h5>
+                            <span>Вологодская обл., д. Пача</span>
+                            <img src="./images/VectorWhite.svg" alt="белая стрелочка">
+                        </div>
+                    </div>
+                </div>
+                <div class="jobsBlock__block-md job3 mb-4">
+                    <p>Баня "Тополь" (5х6 м)</p>
+                    <div class="jobsBlock-info">
+                        <div class="jobsBlock-info__wrapper">
+                            <h5>Баня "Тополь" (5x6 м)</h5>
+                            <span>Вологодская обл., д. Пача</span>
+                            <img src="./images/VectorWhite.svg" alt="белая стрелочка">
+                        </div>
+                    </div>
+                </div>
+                <div class="jobsBlock__block-md job3 mb-4">
+                    <p>Беседка «Береза» (3х3 м)</p>
+                    <div class="jobsBlock-info">
+                        <div class="jobsBlock-info__wrapper">
+                            <h5>Беседка «Береза» (3х3 м)</h5>
+                            <span>Вологодская обл., д. Пача</span>
+                            <img src="./images/VectorWhite.svg" alt="белая стрелочка">
+                        </div>
+                    </div>
+                </div>
+                <div class="jobsBlock__block-md job2 mb-4">
+                    <p>Дом «Ясень» (10х9,5 м)</p>
+                    <div class="jobsBlock-info">
+                        <div class="jobsBlock-info__wrapper">
+                            <h5>Дом «Ясень» (10х9,5 м)</h5>
+                            <span>Вологодская обл., д. Пача</span>
+                            <img src="./images/VectorWhite.svg" alt="белая стрелочка">
+                        </div>
+                    </div>
+                </div>
+                <div class="jobsBlock__block-md job1 mb-4">
+                    <p>Баня «Тополь» (5x6 м)</p>
+                    <div class="jobsBlock-info">
+                        <div class="jobsBlock-info__wrapper">
+                            <h5>Баня "Тополь" (5x6 м)</h5>
+                            <span>Вологодская обл., д. Пача</span>
+                            <img src="./images/VectorWhite.svg" alt="белая стрелочка">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
             <div class="row justify-content-around">
-                <div class="jobsBlock__block-md job1">
-                    <p>Баня "Тополь" (5х6 м)</p>
-                </div>
-                <div class="jobsBlock__block-md job2">
-                    <p>Дом "Ясень" (10х9,5 м)</p>
-                </div>
-                <div class="jobsBlock__block-md job3">
-                    <p>Беседка "Берёза" (3х3 м)</p>
-                </div>
-            </div>
-
-            <div class="row justify-content-around mt-4">
-                <div class="jobsBlock__block-md job3">
-                    <p>Беседка "Берёза" (3х3 м)</p>
-                </div>
-                <div class="jobsBlock__block-md job2">
-                    <p>Дом "Ясень" (10х9,5 м)</p>
-                </div>
-                <div class="jobsBlock__block-md job1">
-                    <p>Баня "Тополь" (5х6 м)</p>
-                </div>
-            </div>
-
-            <div class="row justify-content-around mt-4">
                 <div class="orangeBtn">
                     Все работы
                 </div>
@@ -171,29 +223,27 @@
         <section class="container benefit mt-70">
             <h2 class="title text-center">Почему выгодно работать с нами?</h2>
             <div class="row justify-content-between">
-                <div class="col-md-3 d-flex flex-column">
+                <div class="col-md-4 col-sm-5 d-flex flex-column">
                     <img src="./images/plus1.svg" alt="">
                     <p>Консультации специалистов по всем этапам строительства</p>
                 </div>
-                <div class="col-md-3 d-flex flex-column">
+                <div class="col-md-4 col-sm-5 d-flex flex-column">
                     <img src="./images/plus2.svg" alt="">
                     <p>Выгодная стоимость</p>
                 </div>
-                <div class="col-md-3 d-flex flex-column">
+                <div class="col-md-4 col-sm-5 d-flex flex-column">
                     <img src="./images/plus3.svg" alt="">
                     <p>Качественные материалы</p>
                 </div>
-            </div>
-            <div class="row justify-content-between mt-5">
-                <div class="col-md-3 d-flex flex-column">
+                <div class="col-md-4 col-sm-5 d-flex flex-column">
                     <img src="./images/plus4.svg" alt="">
                     <p>индивидуальные проекты</p>
                 </div>
-                <div class="col-md-3 d-flex flex-column">
+                <div class="col-md-4 col-sm-5 d-flex flex-column">
                     <img src="./images/plus5.svg" alt="">
                     <p>Выполнение работ точно в срок</p>
                 </div>
-                <div class="col-md-3 d-flex flex-column">
+                <div class="col-md-4 col-sm-5 d-flex flex-column">
                     <img src="./images/plus6.svg" alt="">
                     <p>Гарантийные обязательства</p>
                 </div>
@@ -206,7 +256,7 @@
                 <h3 class="callBack__title title">Хотите дом не похожий на другие?</h3>
                 <p class="callBack__text">Оставьте свой номер, мы свяжемся с вами, уточним детали и рассчитаем стоиость дома вашей мечты</p>
                 <div class="row">
-                    <div class="col-5 mx-auto">
+                    <div class="callBack__form mx-auto">
                         <form action="#">
                             <input type="text" class="callBack__input" placeholder="Телефон" name="user_phone">
                             <button type="submit" class="callBack__submit">Оставить заявку</button>
@@ -219,9 +269,9 @@
 
         <!-- Новости -->
         <section class="container news mb-5 mt-5">
-            <div class="row">
-                <div class="col-md-6">
-                    <img src="./images/SimpleFoto.jpg" alt="Фотография дома">
+            <div class="row mx-1">
+                <div class="col-md-6 px-0">
+                    <img src="./images/SimpleFoto.jpg" class="w-100" alt="Фотография дома">
                 </div>
                 <div class="col-md-6 news__col">
                     <h1>H1. Пример заголовка SEO текста в две строки</h1>
@@ -234,30 +284,29 @@
                 </div>
             </div>
         </section>
-
     </section>
 
     <!-- Подвал -->
     <footer>
         <div class="container footer">
             <div class="row">
-                <div class="col-md-2">
+                <div class="col-md-2 col-sm-6">
                     <ul>
                         <li>
-                            <a href="#">О компании</a>
+                            <a href="#" class="footer__h5">О компании</a>
                         </li>
                         <li>   
-                            <a href="#">Наши работы</a>
+                            <a href="#" class="footer__h5">Наши работы</a>
                         </li>
                         <li>   
-                            <a href="#">Статьи</a>
+                            <a href="#" class="footer__h5">Статьи</a>
                         </li>
                         <li>   
-                            <a href="#">Контакты</a>
+                            <a href="#" class="footer__h5">Контакты</a>
                         </li>
                     </ul>
                 </div>
-                <div class="col-md-2">
+                <div class="col-md-2 col-sm-6">
                     <h5>Проекты</h5>
                     <ul>
                         <li>   
@@ -271,15 +320,15 @@
                         </li>
                     </ul>
                 </div>
-                <div class="col-md-4">
+                <div class="col-md-4 col-sm-6">
                     <h5>Услуги</h5>
                     <ul>
-                        <li><a href="#">Наружиная отделка</a></li>
+                        <li><a href="#">Наружная отделка</a></li>
                         <li><a href="#">Внтуренняя отделка</a></li>
                         <li><a href="#">Кровельные работы</a></li>
                     </ul>
                 </div>
-                <address class="col-md-4">
+                <address class="col-md-3 col-sm-6">
                     <h5 class="m-0">Связаться с нами</h5>
                     <div class="footer__contact">
                         <p>+ 7 906 2-999-555</p>
@@ -298,13 +347,13 @@
     <div class="container-fluid PS">
         <div class="container">
             <div class="row">
-                <div class="col-md-3">
+                <div class="col-md-3 col-12">
                     <p>© 2019 ООО «АБ-СТРОЙ»</p>
                 </div>
-                <div class="col-md-3">
+                <div class="col-md-3 col-12">
                    <a href="#">Политика конфиденциальности</a>
                 </div>
-                <div class="col-md-3 offset-md-3 PS__madeIn">
+                <div class="col-md-3 col-12 offset-md-3 PS__madeIn">
                     <a href="#">Сделано в 
                         <img src="./images/PS.svg" alt="PLACESTART">
                     </a>
